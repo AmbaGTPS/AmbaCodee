@@ -2,10 +2,10 @@
 
 :root {
     --primary-color: #0366d6; /* GitHub blue */
-    --secondary-color: #f6f8fa; /* GitHub light background */
+    --secondary-color: hwb(209 0% 79%); /* GitHub light background */
     --background-dark: #24292e; /* GitHub dark background */
     --text-light: #ffffff;
-    --text-dark: #2f363d; /* GitHub dark text */
+    --text-dark: hsl(0, 0%, 100%); /* GitHub dark text */
     --accent-color: #28a745; /* GitHub green */
     --button-hover: #005cc5; /* Darker blue on hover */
 }
