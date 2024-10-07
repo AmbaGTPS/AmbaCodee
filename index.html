@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KOMISI AMBA GTPS</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Generate Your Referral Code</h1>
+        <button onclick="generateCode()" id="generateButton" class="button">
+            <i class="fas fa-magic"></i> Generate Code
+        </button>
+
+        <div id="referralCode"></div>
+
+        <button id="copyButton" onclick="copyCode()" class="button" disabled>
+            <i class="fas fa-copy"></i> Copy
+        </button>
+
+        <!-- WhatsApp Instruction -->
+        <div id="whatsappInstruction" style="display: none;"></div>
+    </div>
+
+    <!-- Snackbar Notification -->
+    <div id="snackbar"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

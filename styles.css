@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --primary-color: #0366d6; /* GitHub blue */
+    --secondary-color: #f6f8fa; /* GitHub light background */
+    --background-dark: #24292e; /* GitHub dark background */
+    --text-light: #ffffff;
+    --text-dark: #2f363d; /* GitHub dark text */
+    --accent-color: #28a745; /* GitHub green */
+    --button-hover: #005cc5; /* Darker blue on hover */
+}
+
+body {
+    font-family: 'Gothic A1', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: var(--secondary-color);
+    color: var(--text-dark);
+    overflow: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    background-color: var(--background-dark);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    animation: slideIn 1s ease-out;
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    color: var(--text-light);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.button {
+    background: var(--primary-color);
+    color: var(--text-light);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 1rem 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: inline-flex;
+    align-items: center;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.button:hover {
+    transform: scale(1.1);
+    background-color: var(--button-hover);
+}
+
+.button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    animation: none;
+}
+
+#referralCode {
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+    opacity: 0;
+    transform: scale(0.9) rotate(-10deg);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    color: var(--accent-color);
+}
+
+#referralCode.show {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+}
+
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    background-color: var(--accent-color);
+    color: #fff;
+    text-align: center;
+    border-radius: 50px;
+    padding: 0.8rem;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 1rem;
+    transform: translateX(-50%) translateY(50px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+#snackbar.show {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+#whatsappInstruction {
+    margin-top: 1.5rem;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#whatsappInstruction.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#whatsappInstruction .button {
+    background-color: #25D366;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    display: inline-flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+#whatsappInstruction .button:hover {
+    background-color: #1ebe57;
+}
